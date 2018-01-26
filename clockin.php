@@ -3,6 +3,10 @@
     $name = isset($_POST['person']) ? $_POST['person'] : '';
     $date = date("Y-m-d");
     $time = date("H:i:s");
+    if( date('H:i:s',strtotime($time))> date('H:i:s',strtotime('10:19:59')) && date('H:i:s',strtotime($time)) < date('H:i:s',strtotime('11:11:00'))){
+        $time = date('H:i:s',strtotime('11:00:00'));
+    }
+
     $error = 0;
 
     $dbh = new PDO( "mysql:host=localhost;dbname=clockapp", "root", "" );
