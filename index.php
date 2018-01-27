@@ -17,16 +17,16 @@
             <br><hr><br>
             <div class="col-lg-6 col-xs-12 offset-lg-3">
             <div class="row p-1">
-                <a href="/clockapp/clockin.php" class="btn btn-dark btn-block btn-lg" role="button">Clock In</a>
+                <a href="/clockapp/clockin" class="btn btn-dark btn-block btn-lg" role="button">Clock In</a>
             </div>
             <div class="row p-1">
-                <a href="/clockapp/clockout.php" class="btn btn-dark btn-block btn-lg" role="button">Clock Out</a>
+                <a href="/clockapp/clockout" class="btn btn-dark btn-block btn-lg" role="button">Clock Out</a>
             </div>
             <div class="row p-1">
-                <a href="/clockapp/break.php" class="btn btn-dark btn-block btn-lg" role="button">Break</a>
+                <a href="/clockapp/break" class="btn btn-dark btn-block btn-lg" role="button">Break</a>
             </div>
             <div class="row p-1">
-                <a href="/clockapp/manage.php" class="btn btn-dark btn-block btn-lg" role="button">Manage</a>
+                <a href="/clockapp/manage" class="btn btn-dark btn-block btn-lg" role="button">Manage</a>
             </div>
             </div>
         </div>

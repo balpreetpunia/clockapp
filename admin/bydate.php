@@ -63,7 +63,7 @@
                 <h6 class="mt-4 text-left">Date: <?= $date ?> </h6>
             </div>
         <div class="col-lg-9 lg-auto d-flex justify-content-end">
-            <form class="form-inline" method="post" action="/clockapp/manage/bydate.php">
+            <form class="form-inline" method="post" action="/clockapp/admin/bydate">
                 <div class="input-group mb-3">
                     <button class="btn btn-outline-secondary" type="submit" name="minus" value="minus"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;</button>&nbsp;
                     <button class="btn btn-outline-secondary" type="submit" name="plus" value="plus">&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></button>&nbsp;
@@ -161,14 +161,14 @@
             </table>
         <div class="row">
             <div class="col-lg-3 col-sm-12 text-left">
-                <a href="/clockapp/manage/byemp.php" ><h6>By Employee</h6></a>
+                <a href="/clockapp/admin/byemp" ><h6>By Employee</h6></a>
             </div>
         </div>
         <?php else: ?>
         <hr>
         <div class="row">
             <div class="col-lg-3 col-sm-12 text-left">
-                <a href="/clockapp/manage/byemp.php" ><h6 class="mt-3">By Employee</h6></a>
+                <a href="/clockapp/admin/byemp" ><h6 class="mt-3">By Employee</h6></a>
             </div>
             <div class=" offset-lg-2 col-lg-6 alert alert_warning">
                 <h6 class="text-left">No Information to display</h6>

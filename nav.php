@@ -9,25 +9,25 @@ echo
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/clockapp/clockin.php">Clock In</span></a>
+                    <a class="nav-link" href="/clockapp/clockin">Clock In</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/clockapp/clockout.php">Clock Out</a>
+                    <a class="nav-link" href="/clockapp/clockout">Clock Out</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/clockapp/manage.php">Manage</a>
+                    <a class="nav-link" href="/clockapp/manage">Manage</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/clockapp/manage/bydate.php">View By Date</a>
+                    <a class="nav-link" href="/clockapp/admin/bydate">View By Date</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/clockapp/manage/byemp.php">View By Employee</a>
+                    <a class="nav-link" href="/clockapp/admin/byemp">View By Employee</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="/clockapp/manage/addemp.php">Add Employee</a>
+                    <a class="nav-link disabled" href="/clockapp/admin/addemp">Add Employee</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="/clockapp/manage/removeemp.php">Remove Employee</a>
+                    <a class="nav-link disabled" href="/clockapp/admin/removeemp">Remove Employee</a>
                 </li>
             </ul>
         </div>

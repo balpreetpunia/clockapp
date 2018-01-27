@@ -16,16 +16,16 @@
             <br><hr><br>
             <div class="col-lg-6 col-xs-12 offset-lg-3">
                 <div class="row p-1">
-                    <a href="/clockapp/manage/bydate.php" class="btn btn-dark btn-block btn-lg" role="button">View by Date</a>
+                    <a href="/clockapp/admin/bydate" class="btn btn-dark btn-block btn-lg" role="button">View by Date</a>
                 </div>
                 <div class="row p-1">
-                    <a href="/clockapp/manage/byemp.php" class="btn btn-dark btn-block btn-lg" role="button">View by Employee</a>
+                    <a href="/clockapp/admin/byemp" class="btn btn-dark btn-block btn-lg" role="button">View by Employee</a>
                 </div>
                 <div class="row p-1">
-                    <a href="/clockapp/manage/addemp.php" class="btn btn-dark btn-block btn-lg disabled" role="button">Add Employee</a>
+                    <a href="/clockapp/admin/addemp" class="btn btn-dark btn-block btn-lg disabled" role="button">Add Employee</a>
                 </div>
                 <div class="row p-1">
-                    <a href="/clockapp/manage/removeemp.php" class="btn btn-dark btn-block btn-lg disabled" role="button">Remove Employee</a>
+                    <a href="/clockapp/admin/removeemp" class="btn btn-dark btn-block btn-lg disabled" role="button">Remove Employee</a>
                 </div>
             </div>
         </div>

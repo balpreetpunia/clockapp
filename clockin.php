@@ -67,7 +67,7 @@
             <a href="/clockapp/"><img class="img-responsive" src="tlogo.png"></a>
         </div>
         <br><hr><br>
-        <form action="/clockapp/clockin.php" method="post" value="in">
+        <form action="/clockapp/clockin" method="post" value="in">
         <div class="form-group">
             <select class="form-control" name="person" id="exampleFormControlSelect1">
                 <option value="">Select Name</option>

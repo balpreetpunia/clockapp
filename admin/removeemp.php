@@ -53,7 +53,7 @@
                 <a href="/clockapp/"><img class="img-responsive" src="/clockapp/tlogo.png"></a>
             </div>
             <br><hr><br>
-            <form action="/clockapp/manage/removeemp.php" method="post" value="in">
+            <form action="/clockapp/admin/removeemp" method="post" value="in">
                 <div class="form-group">
                     <select class="form-control" name="person" >
                         <option value="">Select Name</option>

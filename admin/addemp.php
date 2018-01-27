@@ -53,7 +53,7 @@
             <a href="/clockapp/"><img class="img-responsive" src="/clockapp/tlogo.png"></a>
         </div>
         <br><hr><br>
-        <form action="/clockapp/manage/addemp.php" method="post" value="in">
+        <form action="/clockapp/admin/addemp" method="post" value="in">
             <div class="form-group">
                 <input class="form-control" name="person" type="text" placeholder="Enter Name">
             </div>

@@ -75,7 +75,7 @@
                 </h6>
             </div>
             <div class="col-lg-9 lg-auto d-flex justify-content-end">
-                <form class="form-inline" method="post" action="/clockapp/manage/byemp.php">
+                <form class="form-inline" method="post" action="/clockapp/admin/byemp">
                     <div class="input-group mb-3">
                         <input class="form-control" type="date" name="dateStart">
                         <input class="form-control" type="date" name="dateEnd">
@@ -179,7 +179,7 @@
             </table>
             <div class="row">
                 <div class="col-lg-3 col-sm-12 text-left">
-                    <a href="/clockapp/manage/bydate.php" ><h6>By Date</h6></a>
+                    <a href="/clockapp/admin/bydate" ><h6>By Date</h6></a>
                 </div>
                 <div class="col-lg-3 col-sm-12 offset-lg-6">
                     <h6 class="text-right">Total Hours: <?= round($totalHours,2) ?></h6>
@@ -189,7 +189,7 @@
         <hr>
         <div class="row">
             <div class="col-lg-3 col-sm-12 text-left">
-                <a href="/clockapp/manage/bydate.php" ><h6 class="mt-3">By Date</h6></a>
+                <a href="/clockapp/admin/bydate" ><h6 class="mt-3">By Date</h6></a>
             </div>
             <div class=" offset-lg-2 col-lg-6 alert alert_warning">
                 <h6 class="text-left">
