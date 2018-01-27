@@ -1,8 +1,8 @@
 <?php
 
     date_default_timezone_set("America/Toronto");
-    $dbh = new PDO( "mysql:host=localhost;dbname=clockapp", "root", "" );
-    $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+
+    require_once( '../shared/connect.php' );
 
     $search = isset($_POST['name']) ? $_POST['name'] : '';
     $category = isset($_POST['category']) ? $_POST['category'] : 'name';
@@ -40,6 +40,8 @@
     $sthEmp->execute();
     $availEmp = $sthEmp->fetchAll();
     $empCount = $sthEmp->rowCount();
+
+    $dbh=null;
 ?>
 
 

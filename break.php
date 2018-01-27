@@ -5,8 +5,7 @@
     $time = date("H:i:s");
     $error = 0;
 
-    $dbh = new PDO( "mysql:host=localhost;dbname=clockapp", "root", "" );
-    $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    require_once( 'shared/connect.php' );
 
     if($name!= '' && isset($_POST['start_button'])){
 
@@ -63,6 +62,8 @@
     $empCount = $sthEmp->rowCount();
 
     $time = date('g:i A',strtotime($time));
+
+    $dbh=null;
 
 ?>
 

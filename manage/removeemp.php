@@ -1,7 +1,6 @@
 <?php
 
-    $dbh = new PDO( "mysql:host=localhost;dbname=clockapp", "root", "" );
-    $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    require_once( '../shared/connect.php' );
 
     $name = isset($_POST['person']) ? $_POST['person'] : '';
     $error = 0;
@@ -34,7 +33,7 @@
     $availEmp = $sthEmp->fetchAll();
     $empCount = $sthEmp->rowCount();
 
-
+    $dbh=null;
 ?>
 
 
