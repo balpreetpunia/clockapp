@@ -5,9 +5,6 @@
     require_once( '../shared/connect.php' );
 
     $date = date('Y-m-d');
-    //$plus = isset($_POST['plus']) ? $_POST['plus'] : '';
-    //$minus = isset($_POST['minus']) ? $_POST['minus'] : '';
-
 
     if(isset($_POST['date']) && $_POST['date'] != ''){
         $date = $_POST['date'];
