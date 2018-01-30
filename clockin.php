@@ -43,6 +43,8 @@
     $availEmp = $sthEmp->fetchAll();
     $empCount = $sthEmp->rowCount();
 
+    $time = date('g:i A',strtotime($time));
+
     $dbh=null;
 
 
@@ -88,7 +90,7 @@
             <?php
             if($name != '' &&  $error == 0) {
                 foreach ($available as $avail ) {
-                    echo $avail['name'] . " clocked in on " . $avail['date'] . " at " . $avail['timeIn'];
+                    echo $avail['name'] . " clocked in on " . $avail['date'] . " at " . $time;
                 }
             }
             if ($error!=0){

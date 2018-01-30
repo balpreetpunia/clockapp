@@ -59,15 +59,15 @@
         <hr>
 
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-4">
                 <h6 class="mt-4 text-left">Date: <?= $date ?> </h6>
             </div>
-        <div class="col-lg-9 lg-auto d-flex justify-content-end">
+        <div class="col-lg-9 col-md-9 col-sm-8 d-flex justify-content-end">
             <form class="form-inline" method="post" action="/clockapp/admin/bydate">
                 <div class="input-group mb-3">
                     <button class="btn btn-outline-secondary" type="submit" name="minus" value="minus"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;</button>&nbsp;
                     <button class="btn btn-outline-secondary" type="submit" name="plus" value="plus">&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></button>&nbsp;
-                    <input class="form-control" type="date" name="date">
+                    <input class="form-control" style="width:180px;"  type="date" name="date">
 
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="submit" value="Submit">
@@ -81,6 +81,7 @@
         </div>
 
         <?php if ($count > 0): ?>
+        <div class="table-responsive-sm">
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
@@ -159,6 +160,7 @@
                 <?php endforeach ?>
                 </tbody>
             </table>
+        </div>
         <div class="row">
             <div class="col-lg-3 col-sm-12 text-left">
                 <a href="/clockapp/admin/byemp" ><h6>By Employee</h6></a>

@@ -98,7 +98,7 @@
         </div>
 
         <?php if ($count > 0): ?>
-            <table class="table table-striped table-bordered">
+            <table class="table table-striped table-bordered table-responsive-sm">
                 <thead>
                 <tr>
                     <td>Date</td>
@@ -178,10 +178,10 @@
                 </tbody>
             </table>
             <div class="row">
-                <div class="col-lg-3 col-sm-12 text-left">
+                <div class="col-5 text-left">
                     <a href="/clockapp/admin/bydate" ><h6>By Date</h6></a>
                 </div>
-                <div class="col-lg-3 col-sm-12 offset-lg-6">
+                <div class="col-7">
                     <h6 class="text-right">Total Hours: <?= round($totalHours,2) ?></h6>
                 </div>
             </div>
