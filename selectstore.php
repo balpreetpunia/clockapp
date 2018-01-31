@@ -1,7 +1,7 @@
 <?php
 
     if (isset($_POST['store']) && $_POST['store'] != ''){
-        setcookie('store', $_POST['store'], 0, "/");
+        setcookie('store', $_POST['store'], time() + (86400 * 30 * 12), "/");
         header('Location: /clockapp/');
         exit();
     }

@@ -1,8 +1,27 @@
 <?php
-    if(isset($_POST['username'])){
-        setcookie('login', true, 0, "/");
-        header('Location: /clockapp/');
-        exit();
+
+    $username = isset($_POST['username']) ? $_POST['username'] : '';
+    $password = isset($_POST['password']) ? $_POST['password'] : '';
+    $error = 0;
+
+    if($username != '' && $password != ''){
+
+        require_once( 'shared/connect.php' );
+
+        $sql = "select * from admin where username = '$username' and password = '$password'";
+        $sth = $dbh->prepare( $sql );
+        $sth->execute();
+        $available = $sth->fetchAll();
+        $count = $sth->rowCount();
+
+        if ($count > 0){
+            setcookie('login', true, 0, "/");
+            header('Location: /clockapp/');
+            exit();
+        }
+        else{
+            $error = 1;
+        }
     }
 
 
@@ -38,6 +57,12 @@
                 </div>
             </div>
         </form>
+        <br>
+        <?php
+        if($error == 1) {
+            echo '<div class="alert alert-danger" role="alert">Invalid Credentials!</div>';
+        }
+        ?>
     </div>
 </div>
 </div>
