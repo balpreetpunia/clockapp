@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    <?php include 'redirectstore.php'; ?>
     <?php include 'head.php'; ?>
 </head>
 

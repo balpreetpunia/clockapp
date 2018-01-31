@@ -35,6 +35,9 @@ echo
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/clockapp/selectstore">Select Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/clockapp/logout">Sign Out</a>
                     </li>';
                             }
                         }
