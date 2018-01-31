@@ -3,6 +3,7 @@
     $name = isset($_POST['person']) ? $_POST['person'] : '';
     $date = date("Y-m-d");
     $time = date("H:i:s");
+    $store = $_COOKIE['store'];
     if( date('H:i:s',strtotime($time))> date('H:i:s',strtotime('10:19:59')) && date('H:i:s',strtotime($time)) < date('H:i:s',strtotime('11:11:00'))){
         $time = date('H:i:s',strtotime('11:00:00'));
     }
@@ -13,7 +14,7 @@
 
     if($name!= ''){
 
-        $sql2 = "select timeIn from clock where name = '$name' and date = '$date'";
+        $sql2 = "select timeIn from clock where name = '$name' and date = '$date' and store = '$store'";
         $sth = $dbh->prepare( $sql2 );
         $sth->execute();
         $available = $sth->fetchAll();
@@ -25,10 +26,10 @@
         }
         else
         {
-            $sql = "insert into clock(name, date, timeIn) values('$name','$date', '$time')";
+            $sql = "insert into clock(name, date, timeIn, store) values('$name','$date', '$time','$store')";
             $dbh->exec($sql);
 
-            $sql2 = "select * from clock where name = '$name' and date = '$date'";
+            $sql2 = "select * from clock where name = '$name' and date = '$date' and store = '$store'";
             $sth = $dbh->prepare( $sql2 );
             $sth->execute();
             $available = $sth->fetchAll();
@@ -37,7 +38,7 @@
 
     }
 
-    $sqlEmp = "select * from employees";
+    $sqlEmp = "select * from employees where store = '$store'";
     $sthEmp = $dbh->prepare($sqlEmp);
     $sthEmp->execute();
     $availEmp = $sthEmp->fetchAll();

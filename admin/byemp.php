@@ -9,6 +9,7 @@
     $date = isset($_POST['date']) ? $_POST['date'] : date('Y-m-d');
     $dateStart = isset($_POST['dateStart']) ? $_POST['dateStart'] : $date;
     $dateEnd = isset($_POST['dateEnd']) ? $_POST['dateEnd'] : '';
+    $store = $_COOKIE['store'];
     $count = 0;
     $totalHours = 0;
     $error = 0;
@@ -21,7 +22,7 @@
     elseif($search != ''){
         if(!empty($_POST['dateStart']) && !empty($_POST['dateEnd']))
         {
-            $sql = "select * from clock where name = '$search' and date between '$dateStart' and '$dateEnd' ";
+            $sql = "select * from clock where name = '$search' and store = '$store' and date between '$dateStart' and '$dateEnd' ";
             $sth = $dbh->prepare($sql);
             $sth->execute();
             $available = $sth->fetchAll();
@@ -35,7 +36,7 @@
     }
 
 
-    $sqlEmp = "select * from employees";
+    $sqlEmp = "select * from employees where store = '$store'";
     $sthEmp = $dbh->prepare($sqlEmp);
     $sthEmp->execute();
     $availEmp = $sthEmp->fetchAll();

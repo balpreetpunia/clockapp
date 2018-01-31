@@ -3,6 +3,7 @@
     $name = isset($_POST['person']) ? $_POST['person'] : '';
     $date = date("Y-m-d");
     $time = date("H:i:s");
+    $store = $_COOKIE['store'];
     $error = 0;
 
     require_once( 'shared/connect.php' );
@@ -55,7 +56,7 @@
         }
     }
 
-    $sqlEmp = "select * from employees";
+    $sqlEmp = "select * from employees where store = '$store'";
     $sthEmp = $dbh->prepare($sqlEmp);
     $sthEmp->execute();
     $availEmp = $sthEmp->fetchAll();

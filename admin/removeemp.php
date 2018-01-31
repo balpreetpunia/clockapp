@@ -3,11 +3,12 @@
     require_once( '../shared/connect.php' );
 
     $name = isset($_POST['person']) ? $_POST['person'] : '';
+    $store = $_COOKIE['store'];
     $error = 0;
 
     if($name!= ''){
 
-        $sql2 = "select name from employees where name = '$name'";
+        $sql2 = "select name from employees where name = '$name' and store = '$store'";
         $sth = $dbh->prepare( $sql2 );
         $sth->execute();
         $available = $sth->fetchAll();
@@ -15,7 +16,7 @@
 
         if($count > 0)
         {
-            $sql = "delete from employees where name = '$name'";
+            $sql = "delete from employees where name = '$name' and store = '$store'";
             $dbh->exec($sql);
 
         }
@@ -27,7 +28,7 @@
 
     }
 
-    $sqlEmp = "select * from employees";
+    $sqlEmp = "select * from employees where store = '$store'";
     $sthEmp = $dbh->prepare($sqlEmp);
     $sthEmp->execute();
     $availEmp = $sthEmp->fetchAll();

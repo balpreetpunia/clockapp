@@ -4,6 +4,7 @@
 
     require_once( '../shared/connect.php' );
 
+    $store = $_COOKIE['store'];
     $date = date('Y-m-d');
 
     if(isset($_POST['date']) && $_POST['date'] != ''){
@@ -27,7 +28,7 @@
         $_SESSION['date'] = $date;
     }
 
-    $sql = "select * from clock where date = '$date'";
+    $sql = "select * from clock where date = '$date' and store = '$store'";
     $sth = $dbh->prepare($sql);
     $sth->execute();
     $available = $sth->fetchAll();

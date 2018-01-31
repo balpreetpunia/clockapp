@@ -4,13 +4,14 @@
 
     $name = isset($_POST['person']) ? $_POST['person'] : '';
     $name = ucfirst(strtolower($name));
+    $store = $_COOKIE['store'];
     $error = 0;
 
 
 
     if($name!= ''){
 
-        $sql2 = "select name from employees where name = '$name'";
+        $sql2 = "select name from employees where name = '$name' and store = '$store'";
         $sth = $dbh->prepare( $sql2 );
         $sth->execute();
         $available = $sth->fetchAll();
@@ -22,7 +23,7 @@
         }
         else
         {
-            $sql = "INSERT INTO employees (name) VALUES ('$name')";
+            $sql = "INSERT INTO employees (name, store) VALUES ('$name','$store')";
             $dbh->exec($sql);
         }
     }

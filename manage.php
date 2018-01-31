@@ -22,10 +22,18 @@
                     <a href="/clockapp/admin/byemp" class="btn btn-dark btn-block btn-lg" role="button">View by Employee</a>
                 </div>
                 <div class="row p-1">
-                    <a href="/clockapp/admin/addemp" class="btn btn-dark btn-block btn-lg disabled" role="button">Add Employee</a>
+                    <a href="/clockapp/admin/addemp" class="btn btn-dark btn-block btn-lg
+                    <?php
+                    if(!isset($_COOKIE['login'])){
+                            echo 'disabled';
+                    } ?>" role="button">Add Employee</a>
                 </div>
                 <div class="row p-1">
-                    <a href="/clockapp/admin/removeemp" class="btn btn-dark btn-block btn-lg disabled" role="button">Remove Employee</a>
+                    <a href="/clockapp/admin/removeemp" class="btn btn-dark btn-block btn-lg
+                    <?php
+                    if(!isset($_COOKIE['login'])){
+                            echo 'disabled';
+                    } ?>" role="button">Remove Employee</a>
                 </div>
             </div>
         </div>
