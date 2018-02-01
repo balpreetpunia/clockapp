@@ -1,5 +1,6 @@
 <?php
 
+    require_once( '../redirects/permission.php' );
     require_once( '../shared/connect.php' );
 
     $name = isset($_POST['person']) ? $_POST['person'] : '';

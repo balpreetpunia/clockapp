@@ -1,5 +1,5 @@
 
-<?php include 'redirectstore.php'; ?>
+<?php require_once( 'redirects/store.php' ); ?>
 
 <!DOCTYPE HTML>
 <html lang="en">

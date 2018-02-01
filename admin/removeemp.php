@@ -1,5 +1,6 @@
 <?php
 
+    require_once( '../redirects/permission.php' );
     require_once( '../shared/connect.php' );
 
     $name = isset($_POST['person']) ? $_POST['person'] : '';
@@ -24,8 +25,6 @@
         {
             $error = 1;
         }
-
-
     }
 
     $sqlEmp = "select * from employees where store = '$store'";
