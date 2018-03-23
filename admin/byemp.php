@@ -78,11 +78,11 @@
             <div class="col-lg-9 lg-auto d-flex justify-content-end">
                 <form class="form-inline" method="post" action="/clockapp/admin/byemp">
                     <div class="input-group mb-3">
-                        <input class="form-control" type="date" name="dateStart">
-                        <input class="form-control" type="date" name="dateEnd">
+                        <input class="form-control" id="dateStart" type="date" name="dateStart">
+                        <input class="form-control" id="dateEnd" type="date" name="dateEnd">
                         &nbsp;
                         <div class="input-group-append">
-                            <select class="form-control" name="name" id="exampleFormControlSelect1">
+                            <select class="form-control" name="name" id="name">
                                 <option value="">Select Name</option>
                                 <?php foreach ($availEmp as $emp): ?>
                                     <option value="<?= $emp['name'] ?>"><?= $emp['name'] ?></option>
@@ -217,6 +217,15 @@
     </div>
 </div>
 <?php include '../footer.php'; ?>
+<script>
+    <?php if(isset($dateStart)&&isset($dateEnd)): ?>
+    document.getElementById("dateStart").valueAsDate =  <?= "new Date('$dateStart')" ?>;
+    document.getElementById("dateEnd").valueAsDate =  <?= "new Date('$dateEnd')" ?>;
+    <?php else: ?>
+    document.getElementById("dateEnd").valueAsDate =  new Date();
+    <?php endif; ?>
+    document.getElementById("name").value = <?="'$search'"?>;
+</script>
 </body>
 
 </html>
