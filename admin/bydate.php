@@ -7,12 +7,7 @@
     $store = $_COOKIE['store'];
     $date = date('Y-m-d');
 
-    if(isset($_POST['date']) && $_POST['date'] != ''){
-        $date = $_POST['date'];
-        $_SESSION['date'] = $date;
-    }
-
-    else if (isset($_POST['plus'])){
+    if (isset($_POST['plus'])){
         if(isset($_SESSION['date'])){
             $date = $_SESSION['date'];
         }
@@ -28,7 +23,13 @@
         $_SESSION['date'] = $date;
     }
 
-    $sql = "select * from clock where date = '$date' and store = '$store'";
+    else if(isset($_POST['date']) && $_POST['date'] != ''){
+        $date = $_POST['date'];
+        $_SESSION['date'] = $date;
+    }
+
+
+$sql = "select * from clock where date = '$date' and store = '$store'";
     $sth = $dbh->prepare($sql);
     $sth->execute();
     $available = $sth->fetchAll();
@@ -65,7 +66,7 @@
                 <div class="input-group mb-3">
                     <button class="btn btn-outline-secondary" type="submit" name="minus" value="minus"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;</button>&nbsp;
                     <button class="btn btn-outline-secondary" type="submit" name="plus" value="plus">&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></button>&nbsp;
-                    <input class="form-control" style="width:180px;"  type="date" name="date">
+                    <input class="form-control" style="width:180px;"  id="date" type="date" name="date">
 
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="submit" value="Submit">
@@ -180,6 +181,9 @@
     </div>
 </div>
 <?php include '../footer.php'; ?>
+<script>
+    document.getElementById("date").valueAsDate =  <?= "new Date('$date')" ?>;
+</script>
 </body>
 
 </html>

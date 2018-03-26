@@ -218,7 +218,7 @@
 </div>
 <?php include '../footer.php'; ?>
 <script>
-    <?php if(isset($dateStart)&&isset($dateEnd)): ?>
+    <?php if($dateStart != '' && $dateEnd != ''): ?>
     document.getElementById("dateStart").valueAsDate =  <?= "new Date('$dateStart')" ?>;
     document.getElementById("dateEnd").valueAsDate =  <?= "new Date('$dateEnd')" ?>;
     <?php else: ?>
